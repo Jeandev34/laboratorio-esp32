@@ -1,5 +1,15 @@
 https://wokwi.com/projects/478791167920291841
 
 
-Este projeto consiste em um sistema de semáforo automatizado com prioridade para pedestres, desenvolvido na plataforma Arduino para o microcontrolador ESP32. O circuito gerencia o fluxo de veículos utilizando três LEDs (Verde, Amarelo e Vermelho) e conta com um botão físico configurado com resistor pull-up interno para a solicitação de travessia.
-O grande diferencial técnico do código está na otimização do tempo de espera: em vez de travar o fluxo por 60 segundos ininterruptos, o sistema monitora o botão a cada segundo. Assim que o pedestre faz a requisição, o ciclo interrompe o sinal verde imediatamente e avança para as fases de atenção (Amarelo) e parada (Vermelho), garantindo segurança e dinamismo ao trânsito urbano.
+🚦 Experimento 02: Semáforo Inteligente com Botão de Pedestre
+Este experimento implementa um sistema de controle de tráfego responsivo que gerencia o fluxo de veículos e garante a prioridade de travessia para pedestres através do microcontrolador ESP32.
+⚙️ Detalhes Técnicos:
+• Lógica: Desenvolvido em C++ com um laço de repetição fragmentado que monitora a entrada digital continuamente.
+• Otimização: Uso de amostragem temporal (leitura a cada 1 segundo) em vez de um travamento longo por delay(), permitindo que o sistema interrompa o sinal verde imediatamente após o clique.
+• Segurança: Configuração do pino do botão como INPUT_PULLUP usando o resistor interno do ESP32, o que elimina ruídos elétricos (falsos cliques) sem a necessidade de componentes externos na placa.
+📌 Mapeamento dos Pinos (GPIOs) do ESP32
+Os LEDs e o botão atuadores do trânsito foram conectados aos seguintes pinos:
+• Pino 14: LED Verde (Fluxo de Veículos)
+• Pino 13: LED Amarelo (Atenção / Transição)
+• Pino 12: LED Vermelho (Parada de Veículos / Travessia Livre)
+• Pino 4: Botão de Pedestre (Acionamento por nível lógico baixo - LOW)
