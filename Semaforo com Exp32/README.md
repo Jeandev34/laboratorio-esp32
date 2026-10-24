@@ -2,6 +2,7 @@ https://wokwi.com/projects/478791167920291841
 
 
 🚦 Experimento 02: Semáforo Inteligente com Botão de Pedestre
+
 Este experimento implementa um sistema de controle de tráfego responsivo que gerencia o fluxo de veículos e garante a prioridade de travessia para pedestres através do microcontrolador ESP32.
 ⚙️ Detalhes Técnicos:
 • Lógica: Desenvolvido em C++ com um laço de repetição fragmentado que monitora a entrada digital continuamente.
