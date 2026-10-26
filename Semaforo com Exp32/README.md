@@ -1,4 +1,4 @@
-https://wokwi.com/projects/478791167920291841
+https://wokwi.com/projects/478984027265779713
 
 
 🚦 Experimento 02: Semáforo Inteligente com Botão de Pedestre
